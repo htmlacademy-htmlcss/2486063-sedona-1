@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Илья Сорокин](https://up.htmlacademy.ru/htmlcss-individual/1/user/2486063).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Миронов](https://htmlacademy.ru/profile/id1336881).
 
 ---
 
