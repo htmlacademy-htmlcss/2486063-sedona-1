@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Седона</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
     <header class="page-header">
@@ -16,7 +16,7 @@
       />
       <nav class="navigation">
         <ul class="navigation-list">
-          <li class="navigation-item">
+          <li class="navigation-item navigation-active">
             <a>Главная</a>
           </li>
           <li class="navigation-item">
@@ -55,37 +55,16 @@
 
     <main class="main-index">
       <section class="hero">
-        <div class="hero-wrapper">
-          <h1 class="visually-hidden">Городок Седона</h1>
-          <img
-            src="images/index-background.jpg"
-            width="1200"
-            height="485"
-            alt="Фото гор Седоны"
-          />
-          <img
-            src="images/index-bottom-background.svg"
-            alt="Нижняя часть изображения гор"
-          />
-          <img
-            src="images/index-welcome.svg"
-            width="256"
-            height="84.48"
-            alt="Надпись welcome to the gergeous"
-          />
-          <img
-            src="images/index-sedona.svg"
-            width="456.7"
-            height="212.77"
-            alt="Надпись Sedona because the Grand Canyon lucky"
-          />
-          <!-- а что нам мешает сделать так ? -->
-          <!-- <img
-          src="images/index-background-with-labels.jpg"
-          width="1200"
-          height="485"
-          alt="Фото гор Седоны и надписи welcome to the gergeous Sedona because the Grand Canyon lucky"
-        /> -->
+        <div class="hero-wrapper container">
+          <div class="hero-background">
+            <h1 class="visually-hidden">Городок Седона</h1>
+            <img
+              src="images/index-welcome.svg"
+              width="458"
+              height="352"
+              alt="Надписи welcome to the gergeous Sedona because the Grand Canyon lucky"
+            />
+          </div>
           <div class="bigger-text">
             <p>
               <b
@@ -204,7 +183,7 @@
             <img
               src="images/tg.svg"
               width="18"
-              height="15.1"
+              height="16"
               alt="Аккаунт Телеграм"
             />
           </a>
@@ -220,14 +199,14 @@
           </a>
         </li>
       </ul>
-      <address>
+      <address class="contact-tel">
         <a href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
       <a href="https://htmlacademy.ru/">
         <img
           src="images/logo-html-academy.svg"
-          width="114.9"
-          height="32.9"
+          width="115"
+          height="33"
           alt="Логотип html academy"
         />
       </a>

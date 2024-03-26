@@ -1,0 +1,329 @@
+
+@font-face {
+  font-family: "PT sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+body{
+  font-family: "PT sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  background-color: #ffffff;
+}
+
+.navigation-item a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation-list .navigation-active {
+  border-bottom: 2px solid #756257;
+  display: inline;
+}
+
+.page-header button {
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 4px;
+  width: 160px;
+  height: 36px;
+  background-color: #756157;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.hero-background {
+  background-image: url("../images/index-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.bigger-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.bigger-text b {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.advantages-item,
+.services-item.another-background {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item.another-background {
+  background-color: rgba(131, 179, 211, 0.2);;
+}
+
+.advantages h3 {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.advantages-photo {
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+
+.advantages-photo h3 {
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.services h3 {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.services-list :nth-of-type(1) {
+  background-image: url("../images/service-house.svg");
+  background-repeat: no-repeat;
+}
+
+.services-list :nth-of-type(2) {
+  background-image: url("../images/service-food.svg");
+  background-repeat: no-repeat;
+}
+
+.services-list :nth-of-type(3) {
+  background-image: url("../images/service-gift.svg");
+  background-repeat: no-repeat;
+}
+
+.services button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #756157;
+  border-radius: 4px;
+  width: 376px;
+  height: 52px;
+}
+
+.subscribe {
+  color: #fff;
+  background-image: url("../images/Subscribe-background.jpg");
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+.subscribe input {
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 4px 0 0 4px;
+  width: 452px;
+  height: 52px;
+}
+
+.subscribe button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  width: 232px;
+  height: 52px;
+  background-color: #82B3D3;
+}
+
+.subscribe.page-catalog {
+  color: #000;
+  background: none;
+}
+
+.contact-tel a {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.catalog-filter-container{
+  color: #fff;
+  background-image: url("../images/filter-background.jpg");
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+.main-header-title {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-item a {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter-hotels legend {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.filter-item label {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.filter-list input[type='checkbox'] {
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Почему то не могу стилизовать радио... */
+.filter-list input[type='radio'] {
+  border-radius: 100%;
+}
+
+.filter-hotels button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.filter-hotels .submit-filter {
+  border-radius: 4px;
+  width: 191px;
+  height: 36px;
+  background-color: #82B3D3;
+}
+
+.filter-hotels .reset-filter {
+  background-color: transparent;
+  border: none;
+}
+
+.find-hotels {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.sorting {
+  font-size: 18px;
+  line-height: 21px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  padding: 14px 20px;
+  width: 292px;
+  height: 49px;
+}
+
+.cards-display-item button {
+  background-color: transparent;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  padding: 14px 12px;
+  width: 48px;
+  height: 48px;
+}
+
+.cards-display-item .active {
+  border-color: #000;
+}
+
+.hotels-cards-list {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hotels-cards-list h3 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hotel-card .card-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color:#fff;
+  padding: 8px 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color: #756157;
+  width: 140px;
+  height: 36px;
+}
+
+.hotel-card .favourites-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color:#fff;
+  padding: 8px 50px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  background-color: #82B3D3;
+  /* width: 140px; */
+  height: 36px;
+}
+
+.hotel-card .card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color: #F2F2F2;
+  width: 140px;
+  height: 37px;
+}
+
+.pagination-link{
+  font-weight: 700;
+  font-size: 20px;
+  font-style: normal;
+  color: #fff;
+  line-height: 36px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+}
+
+.pagination-link.pagination-active {
+  color: #000;
+  background-color: #F2F2F2;
+}
