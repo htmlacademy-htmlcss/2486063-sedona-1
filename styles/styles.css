@@ -1,4 +1,4 @@
-
+/* FONTS */
 @font-face {
   font-family: "PT sans";
   font-style: normal;
@@ -15,29 +15,72 @@
   font-display: swap;
 }
 
-.visually-hidden {
-  display: none;
-}
 
-body{
-  font-family: "PT sans", sans-serif;
+
+
+
+/* VISUALLY-HIDDEN */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+  }
+
+
+
+
+
+/* MAIN STYLES */
+body {
+  font-family: "PT sans", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 400;
   line-height: 21px;
   color: #000;
+  margin: 0;
   background-color: #ffffff;
 }
 
-.navigation-item a {
+.bigger-text-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.bigger-text {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333 inherit;
+}
+
+
+
+
+
+/* HEADER */
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-link {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-decoration: none;
   color: #000;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
 }
 
-.navigation-list .navigation-active {
-  border-bottom: 2px solid #756257;
-  display: inline;
+.navigation-link.is-active {
+  border-color: #756257;
 }
 
 .page-header button {
@@ -46,27 +89,22 @@ body{
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
+  border: none;
   border-radius: 4px;
   width: 160px;
   height: 36px;
   background-color: #756157;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+
+
+
+
+/* INDEX CONTENT */
 .hero-background {
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
-}
-
-.bigger-text {
-  font-size: 22px;
-  line-height: 26px;
-}
-
-.bigger-text b {
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
 }
 
 .advantages-item,
@@ -82,16 +120,11 @@ body{
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .advantages-photo {
   color: #ffffff;
   background-color: #82B3D3;
-}
-
-.advantages-photo h3 {
-  border-bottom-color: rgba(255, 255, 255, 0.3);
 }
 
 .services h3 {
@@ -100,18 +133,15 @@ body{
   text-transform: uppercase;
 }
 
-.services-list :nth-of-type(1) {
-  background-image: url("../images/service-house.svg");
+.services-item {
   background-repeat: no-repeat;
 }
 
 .services-list :nth-of-type(2) {
-  background-image: url("../images/service-food.svg");
   background-repeat: no-repeat;
 }
 
 .services-list :nth-of-type(3) {
-  background-image: url("../images/service-gift.svg");
   background-repeat: no-repeat;
 }
 
@@ -121,13 +151,20 @@ body{
   line-height: 36px;
   text-align: center;
   color: #fff;
+  cursor: pointer;
   text-transform: uppercase;
   background-color: #756157;
+  border: none;
   border-radius: 4px;
   width: 376px;
   height: 52px;
 }
 
+
+
+
+
+/* SUBSCRIBE BLOCK */
 .subscribe {
   color: #fff;
   background-image: url("../images/Subscribe-background.jpg");
@@ -138,6 +175,7 @@ body{
 .subscribe input {
   font-size: 18px;
   line-height: 24px;
+  border: none;
   border-radius: 4px 0 0 4px;
   width: 452px;
   height: 52px;
@@ -149,6 +187,8 @@ body{
   line-height: 36px;
   text-transform: uppercase;
   color: #fff;
+  cursor: pointer;
+  border: none;
   border-radius: 0 4px 4px 0;
   width: 232px;
   height: 52px;
@@ -160,15 +200,11 @@ body{
   background: none;
 }
 
-.contact-tel a {
-  font-size: 40px;
-  font-style: normal;
-  line-height: 40px;
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 
+
+
+
+/* CATALOG CONTENT */
 .catalog-filter-container{
   color: #fff;
   background-image: url("../images/filter-background.jpg");
@@ -200,11 +236,6 @@ body{
   border-radius: 4px;
   width: 20px;
   height: 20px;
-}
-
-/* Почему то не могу стилизовать радио... */
-.filter-list input[type='radio'] {
-  border-radius: 100%;
 }
 
 .filter-hotels button {
@@ -258,12 +289,13 @@ body{
   border-color: #000;
 }
 
-.hotels-cards-list {
+.card-text,
+.card-price {
   font-size: 18px;
   line-height: 21px;
 }
 
-.hotels-cards-list h3 {
+.card-title {
   font-size: 24px;
   line-height: 28px;
 }
@@ -296,6 +328,10 @@ body{
   height: 36px;
 }
 
+.hotel-card .favourites-btn-active {
+  background-color: #7DB54F;
+}
+
 .hotel-card .card-rating {
   font-size: 16px;
   line-height: 20px;
@@ -307,6 +343,11 @@ body{
   height: 37px;
 }
 
+
+
+
+
+/* PAGINATION */
 .pagination-link{
   font-weight: 700;
   font-size: 20px;
@@ -326,4 +367,18 @@ body{
 .pagination-link.pagination-active {
   color: #000;
   background-color: #F2F2F2;
+}
+
+
+
+
+
+/* FOOTER */
+.contact-tel a {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
 }
