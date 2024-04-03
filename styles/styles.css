@@ -57,7 +57,7 @@ body {
 .bigger-text {
   font-size: 22px;
   line-height: 26px;
-  color: #333 inherit;
+  color: #333;
 }
 
 
@@ -122,8 +122,15 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-photo {
+.advantages-item p {
+  color: #333;
+}
+
+.advantages-item .another-color-text {
   color: #ffffff;
+}
+
+.advantages-photo {
   background-color: #82B3D3;
 }
 
@@ -135,6 +142,10 @@ body {
 
 .services-item {
   background-repeat: no-repeat;
+}
+
+.services-item p {
+  color: #333333;
 }
 
 .services-list :nth-of-type(2) {
@@ -172,6 +183,10 @@ body {
   background-color: #000;
 }
 
+.another--bigger--text {
+  color: #ffffff;
+}
+
 .subscribe input {
   font-size: 18px;
   line-height: 24px;
@@ -207,9 +222,8 @@ body {
 /* CATALOG CONTENT */
 .catalog-filter-container{
   color: #fff;
-  background-image: url("../images/filter-background.jpg");
+  background: url("../images/filter-background.jpg"), #000;
   background-repeat: no-repeat;
-  background-color: #000;
 }
 
 .main-header-title {
@@ -223,6 +237,7 @@ body {
 }
 
 .filter-hotels legend {
+  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
@@ -238,6 +253,12 @@ body {
   height: 20px;
 }
 
+.price-selection {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .filter-hotels button {
   font-weight: 700;
   font-size: 16px;
@@ -251,10 +272,12 @@ body {
   border-radius: 4px;
   width: 191px;
   height: 36px;
+  cursor: pointer;
   background-color: #82B3D3;
 }
 
 .filter-hotels .reset-filter {
+  cursor: pointer;
   background-color: transparent;
   border: none;
 }
@@ -269,6 +292,7 @@ body {
 .sorting {
   font-size: 18px;
   line-height: 21px;
+  color: #333;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   padding: 14px 20px;
@@ -280,6 +304,7 @@ body {
   background-color: transparent;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  cursor: pointer;
   padding: 14px 12px;
   width: 48px;
   height: 48px;
@@ -293,6 +318,7 @@ body {
 .card-price {
   font-size: 18px;
   line-height: 21px;
+  color: #333;
 }
 
 .card-title {
@@ -320,11 +346,11 @@ body {
   line-height: 20px;
   color:#fff;
   padding: 8px 50px;
+  cursor: pointer;
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
   background-color: #82B3D3;
-  /* width: 140px; */
   height: 36px;
 }
 
@@ -335,6 +361,7 @@ body {
 .hotel-card .card-rating {
   font-size: 16px;
   line-height: 20px;
+  color: #333;
   text-align: center;
   text-transform: uppercase;
   border-radius: 4px;

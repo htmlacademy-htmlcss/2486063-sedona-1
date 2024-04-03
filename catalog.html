@@ -54,10 +54,9 @@
     </header>
 
     <main class="main-catalog">
-      <div class="catalog-filter-container">
-        <h1 class="main-header-title">Гостиницы Седоны</h1>
-        <section class="catalog-hotels">
-          <h2 class="visually-hidden">Каталог гостиниц с фильтрами</h2>
+      <section class="catalog-hotels">
+        <div class="catalog-filter-container">
+          <h1 class="main-header-title">Гостиницы Седоны</h1>
           <div class="header-form-bacground">
             <header class="main-header">
               <ul class="breadcrumbs-list">
@@ -76,6 +75,7 @@
                 </li>
               </ul>
             </header>
+            <h2 class="visually-hidden">Каталог гостиниц с фильтрами</h2>
             <form
               class="filter-hotels"
               action="https://echo.htmlacademy.ru/"
@@ -131,8 +131,20 @@
               </fieldset>
               <fieldset class="filter-group">
                 <legend class="filter-title">Стоимость, ₽:</legend>
-                <input type="text" name="min" value="0" placeholder="от" />
-                <input type="text" name="max" value="9000" placeholder="до" />
+                <input
+                  class="price-selection"
+                  type="text"
+                  name="min"
+                  value="0"
+                  placeholder="от"
+                />
+                <input
+                  class="price-selection"
+                  type="text"
+                  name="max"
+                  value="9000"
+                  placeholder="до"
+                />
                 <span class="multi-range">
                   <input
                     type="range"
@@ -155,13 +167,13 @@
             </form>
           </div>
         </div>
-          <div class="find-hotels-container">
+
+        <div class="find-hotels-container">
           <h3 class="find-hotels">Найдено гостиниц: 38</h3>
           <select class="sorting" name="sorting" aria-label="Сортировка">
             <option value="cheap">Сначала дешевые</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-
 
           <ul class="cards-display">
             <li class="cards-display-item">
@@ -379,7 +391,7 @@
             </li>
           </ul>
         </div>
-          <div class="pagination-conteiner">
+        <div class="pagination-conteiner">
           <ul class="pagination">
             <li class="pagination-item">
               <a class="pagination-link pagination-active">1</a>
@@ -397,23 +409,23 @@
           <p class="ellipsis">...</p>
           <a class="pagination-link" href="#">10</a>
         </div>
-        </section>
+      </section>
 
-        <section class="subscribe page-catalog">
-          <h2 class="visually-hidden">Форма для подписки на рассылку</h2>
-          <div class="bigger-text">
-            <p><b>Подпишитесь на рассылку</b></p>
-            <p>
-              Только полезная информация и никакого спама, честное бойскаутское!
-            </p>
-          </div>
-          <form action="https://echo.htmlacademy.ru/" method="post">
-            <label>
-              <input type="email" name="email" placeholder="Ваш e-mail" />
-            </label>
-            <button type="submit">подписаться</button>
-          </form>
-        </section>
+      <section class="subscribe page-catalog">
+        <h2 class="visually-hidden">Форма для подписки на рассылку</h2>
+        <div class="bigger-text">
+          <p><b>Подпишитесь на рассылку</b></p>
+          <p>
+            Только полезная информация и никакого спама, честное бойскаутское!
+          </p>
+        </div>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <label>
+            <input type="email" name="email" placeholder="Ваш e-mail" />
+          </label>
+          <button type="submit">подписаться</button>
+        </form>
+      </section>
     </main>
 
     <footer class="page-footer">
