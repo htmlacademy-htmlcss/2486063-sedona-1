@@ -10,6 +10,7 @@
     <header class="page-header">
       <div class="page-header-container">
         <img
+          class="logo-sedona"
           src="images/logo-sedona.svg"
           width="140"
           height="70"
@@ -49,7 +50,7 @@
                   alt="Закладки"
                 />
               </a>
-              <span class="amount-tabs">12</span>
+              <span class="visually-hidden amount-tabs">12</span>
             </li>
           </ul>
           <button type="button">хочу сюда!</button>
@@ -85,7 +86,12 @@
                 </svg>
               </div>
             </div>
+          </div>
+        </section>
 
+        <section class="advantages">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <div class="advantages-text-container">
             <p class="bigger-text-title">
               <b
                 >Седона — небольшой городок в Аризоне,<br />
@@ -96,17 +102,16 @@
               Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон
             </p>
           </div>
-        </section>
 
-        <section class="advantages">
-          <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages-list">
             <li class="advantages-item advantages-photo">
               <div class="advantages-item-container">
-                <h3 class="another-color-text">Настоящий городок</h3>
-                <p class="another-color-text">
-                  Седона — не аттракцион для туристов, там течёт своя жизнь
-                </p>
+                <div class="advantages-text-wrapper">
+                  <h3 class="another-color-text">Настоящий городок</h3>
+                  <p class="another-color-text">
+                    Седона — не аттракцион для туристов, там течёт своя жизнь
+                  </p>
+                </div>
               </div>
               <img
                 src="images/advantages-cafe.jpg"
@@ -117,30 +122,42 @@
             </li>
             <li class="advantages-item">
               <div class="advantages-item-container">
-                <h3>Небольшая площадь</h3>
-                <p>Все достопримечательности находятся очень близко</p>
+                <div class="advantages-text-wrapper">
+                  <h3>Небольшая площадь</h3>
+                  <p>Все достопримечательности находятся очень близко</p>
+                </div>
               </div>
             </li>
             <li class="advantages-item another-background">
               <div class="advantages-item-container">
-                <h3>Красивая дорога</h3>
-                <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                <div class="advantages-text-wrapper">
+                  <h3>Красивая дорога</h3>
+                  <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                </div>
               </div>
             </li>
             <li class="advantages-item">
               <div class="advantages-item-container">
-                <h3>Мало туристов</h3>
-                <p>Большинство едет в Гранд Каньон и толпится там</p>
+                <div class="advantages-text-wrapper">
+                  <h3>Мало туристов</h3>
+                  <p>Большинство едет в Гранд Каньон и толпится там</p>
+                </div>
               </div>
             </li>
             <li class="advantages-item advantages-photo">
               <div class="advantages-item-container">
-                <h3 class="another-color-text">Там есть мост дьявола</h3>
-                <p class="another-color-text">
-                  Да, по нему можно пройти! Если вы осмелитесь, разумеется
-                </p>
+                <div class="advantages-text-wrapper">
+                  <h3 class="another-color-text">
+                    Там есть <br />
+                    мост дьявола
+                  </h3>
+                  <p class="another-color-text">
+                    Да, по нему можно пройти! Если вы осмелитесь, разумеется
+                  </p>
+                </div>
               </div>
               <img
+                class="advantages-last-img"
                 src="images/advantages-bridge.jpg"
                 width="800"
                 height="385"
@@ -164,35 +181,60 @@
             </p>
             <ul class="services-list">
               <li class="services-item another-background">
-                <img src="./images/service-house.svg" alt="Иконка дома" />
-                <h3>Жильё</h3>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <img
+                  src="./images/service-house.svg"
+                  alt="Иконка дома"
+                  width="75"
+                  height="72"
+                />
+                <div class="services-text-wrapper">
+                  <h3>Жильё</h3>
+                  <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                </div>
               </li>
               <li class="services-item">
-                <img src="./images/service-food.svg" alt="Иконка бурера" />
-                <h3>Еда</h3>
-                <p>
-                  Всегда заказывайте топовый фирменный бургер, вы не
-                  разочаруетесь!
-                </p>
+                <img
+                  src="./images/service-food.svg"
+                  alt="Иконка бурера"
+                  width="75"
+                  height="72"
+                />
+                <div class="services-text-wrapper">
+                  <h3>Еда</h3>
+                  <p>
+                    Всегда заказывайте топовый фирменный бургер, вы не
+                    разочаруетесь!
+                  </p>
+                </div>
               </li>
               <li class="services-item another-background">
-                <img src="./images/service-gift.svg" alt="Иконка подарка" />
-                <h3>Сувениры</h3>
-                <p>
-                  Не только китайского, но и настоящего местного производства!
-                </p>
+                <img
+                  src="./images/service-gift.svg"
+                  alt="Иконка подарка"
+                  width="75"
+                  height="72"
+                />
+                <div class="services-text-wrapper">
+                  <h3>Сувениры</h3>
+                  <p>
+                    Не только китайского, но и настоящего местного производства!
+                  </p>
+                </div>
               </li>
             </ul>
-            <p class="bigger-text-title"><b>Заинтересовались?</b></p>
-            <p class="bigger-text">
-              Укажите предполагаемые даты поездки,<br />
-              и мы покажем вам лучшие предложения гостиниц в Седоне
-            </p>
-            <div class="service-btn-container">
-              <button type="button">Поиск гостиницы в седоне</button>
-            </div>
           </div>
+        </section>
+
+        <section class="index-search-hotels">
+          <p class="bigger-text-title"><b>Заинтересовались?</b></p>
+          <p class="bigger-text">
+            Укажите предполагаемые даты поездки,<br />
+            и мы покажем вам лучшие предложения гостиниц в Седоне
+          </p>
+
+          <button class="index-search-btn" type="button">
+            Поиск гостиницы в седоне
+          </button>
         </section>
 
         <section class="subscribe">
