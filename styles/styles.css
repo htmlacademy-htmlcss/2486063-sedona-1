@@ -826,8 +826,7 @@ body {
 
 .photo-card {
   margin-bottom: 16px;
-  width: 300px;
-  height: 212px;
+  width: 100%;
   object-fit: cover;
 }
 
