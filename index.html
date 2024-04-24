@@ -10,7 +10,7 @@
     <header class="page-header">
       <div class="page-header-container">
         <svg
-          class="logo-sedona"
+          class="logo logo-sedona"
           xmlns="http://www.w3.org/2000/svg"
           width="140"
           height="70"
@@ -75,7 +75,7 @@
         <div class="header-btns-container">
           <ul class="header-btns-list">
             <li class="btns-item">
-              <a href="#">
+              <a class="img-position-container" href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="19"
@@ -91,7 +91,7 @@
               </a>
             </li>
             <li class="btns-item">
-              <a href="#">
+              <a class="img-position-container" href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -108,7 +108,7 @@
               <span class="visually-hidden amount-tabs">12</span>
             </li>
           </ul>
-          <button type="button">хочу сюда!</button>
+          <button class="header-search-btn" type="button">хочу сюда!</button>
         </div>
       </div>
     </header>
@@ -170,6 +170,7 @@
                 </div>
               </div>
               <img
+                class="advantages-img"
                 src="images/advantages-cafe.jpg"
                 width="800"
                 height="385"
@@ -210,7 +211,7 @@
                 </div>
               </div>
               <img
-                class="advantages-last-img"
+                class="advantages-img advantages-last-img"
                 src="images/advantages-bridge.jpg"
                 width="800"
                 height="385"
@@ -314,13 +315,12 @@
         <section class="index-search-hotels">
           <h2 class="visually-hidden">Поиск отелей</h2>
           <p class="bigger-text-title"><b>Заинтересовались?</b></p>
-          <p class="bigger-text">
-            <span class="search-hotels-text-wrapper"
-              >Укажите предполагаемые даты поездки,<!-- prettier-ignore -->
-              и мы покажем вам лучшие предложения гостиниц в Седоне</span
-            >
-          </p>
-
+          <div class="search-hotels-text-wrapper">
+            <p class="bigger-text">
+              Укажите&nbsp;предполагаемые&nbsp;даты&nbsp;поездки,
+              и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие&nbsp;предложения&nbsp;гостиниц&nbsp;в&nbsp;Седоне
+            </p>
+          </div>
           <button class="index-search-btn" type="button">
             Поиск гостиницы в седоне
           </button>
@@ -346,7 +346,9 @@
                   <label>
                     <input type="email" name="email" placeholder="Ваш e-mail" />
                   </label>
-                  <button type="submit">подписаться</button>
+                  <button class="subscribe-btn" type="submit">
+                    подписаться
+                  </button>
                 </div>
               </fieldset>
             </form>
@@ -360,7 +362,10 @@
         <div class="social-list-container">
           <ul class="social-list">
             <li class="social-item">
-              <a href="https://vk.com/htmlacademy">
+              <a
+                class="img-position-container"
+                href="https://vk.com/htmlacademy"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -378,7 +383,7 @@
               </a>
             </li>
             <li class="social-item">
-              <a href="https://t.me/htmlacademy">
+              <a class="img-position-container" href="https://t.me/htmlacademy">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -394,7 +399,10 @@
               </a>
             </li>
             <li class="social-item">
-              <a href="https://www.youtube.com/user/htmlacademyru">
+              <a
+                class="img-position-container"
+                href="https://www.youtube.com/user/htmlacademyru"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="23"
@@ -416,8 +424,9 @@
             <a href="tel:+78128121212">+7 (812) 812-12-12</a>
           </address>
         </div>
-        <a href="https://htmlacademy.ru/">
+        <a class="img-position-container" href="https://htmlacademy.ru/">
           <svg
+            class="logo"
             xmlns="http://www.w3.org/2000/svg"
             width="115"
             height="33"
