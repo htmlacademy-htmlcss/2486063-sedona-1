@@ -146,26 +146,38 @@
                         <ul class="filter-list">
                           <li class="filter-item">
                             <input
-                              class="visually-hidden"
+                              class="filter-check-input visually-hidden"
                               type="checkbox"
                               name="pool"
                               id="pool"
                               checked
                             />
-                            <label for="pool">Бассейн</label>
+                            <label class="filter-check-label" for="pool"
+                              >Бассейн</label
+                            >
                           </li>
                           <li class="filter-item">
                             <input
+                              class="filter-check-input visually-hidden"
                               type="checkbox"
                               name="parking"
                               id="parking"
                               checked
                             />
-                            <label for="parking">Парковка</label>
+                            <label class="filter-check-label" for="parking"
+                              >Парковка</label
+                            >
                           </li>
                           <li class="filter-item">
-                            <input type="checkbox" name="wi-fi" id="wi-fi" />
-                            <label for="wi-fi">Wi-Fi</label>
+                            <input
+                              class="filter-check-input visually-hidden"
+                              type="checkbox"
+                              name="wi-fi"
+                              id="wi-fi"
+                            />
+                            <label class="filter-check-label" for="wi-fi"
+                              >Wi-Fi</label
+                            >
                           </li>
                         </ul>
                       </fieldset>
@@ -174,28 +186,37 @@
                         <ul class="filter-list">
                           <li class="filter-item">
                             <input
+                              class="filter-radio-input visually-hidden"
                               type="radio"
                               name="type-of-housing"
                               id="hotel"
                               checked
                             />
-                            <label for="hotel">Гостиница</label>
+                            <label class="filter-radio-label" for="hotel"
+                              >Гостиница</label
+                            >
                           </li>
                           <li class="filter-item">
                             <input
+                              class="filter-radio-input visually-hidden"
                               type="radio"
                               name="type-of-housing"
                               id="motel"
                             />
-                            <label for="motel">мотель</label>
+                            <label class="filter-radio-label" for="motel"
+                              >Мотель</label
+                            >
                           </li>
                           <li class="filter-item">
                             <input
+                              class="filter-radio-input visually-hidden"
                               type="radio"
                               name="type-of-housing"
                               id="apartments"
                             />
-                            <label for="apartments">Апартаменты</label>
+                            <label class="filter-radio-label" for="apartments"
+                              >Апартаменты</label
+                            >
                           </li>
                         </ul>
                       </fieldset>
@@ -256,8 +277,8 @@
             <div class="find-hotels-container">
               <h3 class="find-hotels">Найдено гостиниц: 38</h3>
               <select class="sorting" name="sorting" aria-label="Сортировка">
-                <option value="popular">Сначала популярные</option>
                 <option value="cheap">Сначала дешевые</option>
+                <option value="popular">Сначала популярные</option>
                 <option value="expensive">Сначала дорогие</option>
               </select>
               <ul class="cards-display">

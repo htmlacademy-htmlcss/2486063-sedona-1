@@ -797,29 +797,79 @@ body {
   display: flex;
 }
 
-.filter-item input {
+.filter-check-input {
   cursor: pointer;
   margin-right: 16px;
   margin-bottom: 0;
 }
 
-.filter-hotels legend {
+.filter-title {
+  padding: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 32px;
 }
 
-.filter-item label {
+.filter-check-label,
+.filter-radio-label {
   cursor: pointer;
   font-size: 18px;
   line-height: 23px;
+  position: relative;
+  padding-left: 36px;
 }
 
-.filter-list input[type="checkbox"] {
+.filter-check-label::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
   border-radius: 4px;
-  min-width: 20px;
-  min-height: 20px;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+}
+
+.filter-check-label::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 10px;
+  background: url(../images/check-icon.svg) no-repeat;
+  left: 4px;
+  top: 5px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.filter-check-input:checked + .filter-check-label::before,
+.filter-radio-input:checked + .filter-radio-label::before {
+  opacity: 1;
+}
+
+.filter-radio-label::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+}
+
+.filter-radio-label::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #3f5e72;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+  z-index: 1;
+  opacity: 0;
 }
 
 .filter-price-container {
