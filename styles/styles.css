@@ -358,6 +358,28 @@ body {
   padding: 8px 34px;
 }
 
+.btns-item {
+  position: relative;
+}
+
+.amount-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: #7db54f;
+  top: 10px;
+  left: 20px;
+  pointer-events: none;
+}
+
 /* INDEX CONTENT */
 .hero {
   margin-bottom: 69px;
@@ -952,6 +974,34 @@ body {
 }
 
 /* CATALOG FILTER -- INPUT STATUS*/
+.filter-item:hover {
+  opacity: 0.6;
+}
+
+.filter-item:focus-within .filter-check-label::after,
+.filter-item:focus-within .filter-radio-label::after {
+  outline: 2px solid #68a2ca;
+}
+
+.filter-item:active {
+  opacity: 0.3;
+}
+
+.price-selection:hover,
+.price-selection:focus {
+  background-color: #e6e6e6;
+}
+
+.price-selection:focus {
+  outline: 2px solid #68a2ca;
+}
+
+@supports selector(:focus-visible) {
+  .price-selection:focus-visible {
+    background-color: #e6e6e6;
+    outline: 2px solid #68a2ca;
+  }
+}
 
 /*CATALOG SORTING AND DISPLAY HOTELS */
 .find-hotels-container {
