@@ -226,41 +226,40 @@
                       <div class="filter-price-container">
                         <fieldset class="filter-group">
                           <legend class="filter-title">Стоимость, ₽:</legend>
-                          <div class="price-selection-wrapper">
-                            <input
-                              class="price-selection price--min"
-                              type="text"
-                              name="min"
-                              value="0"
-                              placeholder=" "
-                            />
-                            <span class="floating-placeholder">от</span>
-                          </div>
-                          <div class="price-selection-wrapper">
-                            <input
-                              class="price-selection price--max"
-                              type="text"
-                              name="max"
-                              value="9000"
-                              placeholder=" "
-                            />
-                            <span class="floating-placeholder">до</span>
-                          </div>
-                          <div class="multi-range">
-                            <input
-                              type="range"
-                              min="0"
-                              max="1500"
-                              value="100"
-                              id="lower"
-                            />
-                            <input
-                              type="range"
-                              min="0"
-                              max="1500"
-                              value="100"
-                              id="upper"
-                            />
+                          <div class="price-range">
+                            <div class="price-selection-wrapper">
+                              <input
+                                class="price-selection price--min"
+                                type="number"
+                                name="min"
+                                value="0"
+                              />
+                              <span class="floating-placeholder">от</span>
+                            </div>
+                            <div class="price-selection-wrapper">
+                              <input
+                                class="price-selection price--max"
+                                type="number"
+                                name="max"
+                                value="9000"
+                              />
+                              <span class="floating-placeholder">до</span>
+                            </div>
+                            <div class="multi-range">
+                              <div
+                                class="range-bar"
+                                style="left: 0; width: 226px"
+                              >
+                                <button
+                                  class="range-btn range-min"
+                                  type="button"
+                                ></button>
+                                <button
+                                  class="range-btn range-max"
+                                  type="button"
+                                ></button>
+                              </div>
+                            </div>
                           </div>
                         </fieldset>
                       </div>

@@ -894,6 +894,11 @@ body {
   opacity: 0;
 }
 
+.price-range {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .filter-price-container {
   max-width: 288px;
 }
@@ -907,6 +912,12 @@ body {
   height: 48px;
   border-style: none;
   background-color: #f2f2f2;
+}
+
+.price-selection::-webkit-outer-spin-button,
+.price-selection::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .price-selection-wrapper {
@@ -933,9 +944,37 @@ body {
 }
 
 .multi-range {
-  width: 140px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 44px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #fff;
+}
+
+.range-btn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  padding: 0;
+  background-color: #fff;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.range-min {
+  left: 0;
+}
+
+.range-max {
+  right: 0;
 }
 
 .filter-btns {
@@ -946,7 +985,7 @@ body {
   padding-top: 56px;
 }
 
-.filter-hotels button {
+.filter-btns button {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1031,6 +1070,10 @@ body {
 }
 
 .sorting {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
   font-family: "PT sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -1038,10 +1081,15 @@ body {
   cursor: pointer;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  background: url(../images/select-arrow.svg) no-repeat;
+  background-position: right 18px center;
   width: 292px;
-  height: 49px;
   margin-right: 70px;
-  padding-left: 15px;
+  padding: 12px 19px;
+}
+
+.sorting option {
+  padding: 0;
 }
 
 .cards-display-item {
@@ -1303,4 +1351,91 @@ body {
 
 .academy-link path:nth-child(2) {
   color: #000;
+}
+
+/* MODAL WINDOW */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+}
+
+.modal-window {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  row-gap: 48px;
+  grid-template-areas:
+    "title title title title"
+    "start-label start-input start-input start-input"
+    "end-label end-input end-input end-input"
+    "adult-label adult-input child-label child-input"
+    "button button button button";
+}
+
+.modal-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: contents;
+}
+
+.modal-title {
+  grid-area: title;
+  margin-bottom: 16px;
+}
+
+.date-start-label {
+  grid-area: start-label;
+}
+
+.date-start-input {
+  grid-area: start-input;
+}
+
+.date-end-label {
+  grid-area: end-label;
+}
+
+.date-end-input {
+  grid-area: end-input;
+}
+
+.adult-label {
+  grid-area: adult-label;
+}
+
+.adult-input {
+  grid-area: adult-input;
+}
+
+.child-label {
+  grid-area: child-label;
+}
+
+.child-input {
+  grid-area: child-input;
+}
+
+.modal-find-btn {
+  grid-area: button;
 }

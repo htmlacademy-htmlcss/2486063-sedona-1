@@ -102,13 +102,14 @@
                     />
                   </svg>
                 </a>
-                <span class="visually-hidden amount-tabs">12</span>
+                <span class="amount-tabs">12</span>
               </li>
             </ul>
             <button class="header-search-btn" type="button">хочу сюда!</button>
           </div>
         </div>
       </header>
+
       <main class="main-index main-container">
         <div class="page-container">
           <section class="hero">
@@ -444,6 +445,62 @@
           </a>
         </div>
       </footer>
+
+      <div class="modal-container">
+        <div class="modal-window">
+          <button class="close-btn" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+
+          <form
+            class="modal-form"
+            action="https://echo.htmlacademy.ru/"
+            method="post"
+          >
+            <fieldset class="modal-fieldset">
+              <legend class="modal-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</legend>
+              <label class="date-start-label" for="date-start"
+                >Дата Заезда:</label
+              >
+              <input
+                class="date-start-input"
+                type="date"
+                name="date-start"
+                id="date-start"
+                value="2020-04-27"
+              />
+              <label class="date-end-label" for="date-end">Дата Выезда:</label>
+              <input
+                class="date-end-input"
+                type="date"
+                name="date-end"
+                id="date-end"
+                value="2023-09-01"
+              />
+              <label class="adult-label" for="adult">Взрослые:</label>
+              <input class="adult-input" type="text" name="adult" id="adult" />
+              <div class="">
+                <label class="child-label" for="child">Дети:</label>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3"
+                  height="12"
+                  fill="none"
+                >
+                  <path
+                    fill="#000"
+                    fill-rule="evenodd"
+                    d="M.393 0h2v2h-2V0Zm2 12h-2V3h2v9Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <input class="child-input" type="text" name="child" id="child" />
+              <button class="modal-find-btn" type="button">НАЙТИ</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
