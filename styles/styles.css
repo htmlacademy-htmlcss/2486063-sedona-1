@@ -1376,8 +1376,35 @@ body {
 
 .close-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50px;
+  right: 50px;
+  border: none;
+  padding: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.close-btn::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 2px;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 2px;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .modal-form {
@@ -1428,8 +1455,27 @@ body {
   grid-area: adult-input;
 }
 
+.child-label-container {
+  display: flex;
+}
+
 .child-label {
   grid-area: child-label;
+}
+
+.icon-info {
+  width: 26px;
+  height: 26px;
+  background-color: #83b3d3;
+  border-radius: 50%;
+}
+
+.icon-info-position {
+  transform: translate(45%, 29%);
+}
+
+.icon-info path {
+  fill: #fff;
 }
 
 .child-input {

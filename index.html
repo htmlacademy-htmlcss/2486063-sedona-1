@@ -479,20 +479,24 @@
               />
               <label class="adult-label" for="adult">Взрослые:</label>
               <input class="adult-input" type="text" name="adult" id="adult" />
-              <div class="">
+              <div class="child-label-container">
                 <label class="child-label" for="child">Дети:</label>
                 <svg
+                  class="icon-info"
                   xmlns="http://www.w3.org/2000/svg"
                   width="3"
                   height="12"
                   fill="none"
+                  aria-label="Ифнормация"
                 >
-                  <path
-                    fill="#000"
-                    fill-rule="evenodd"
-                    d="M.393 0h2v2h-2V0Zm2 12h-2V3h2v9Z"
-                    clip-rule="evenodd"
-                  />
+                  <g class="icon-info-position">
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M.393 0h2v2h-2V0Zm2 12h-2V3h2v9Z"
+                      clip-rule="evenodd"
+                    />
+                  </g>
                 </svg>
               </div>
               <input class="child-input" type="text" name="child" id="child" />
