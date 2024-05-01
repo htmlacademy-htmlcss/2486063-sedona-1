@@ -907,11 +907,19 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding: 12px 20px;
+  padding: 12px 40px 12px 20px;
   width: 143px;
   height: 48px;
   border-style: none;
   background-color: #f2f2f2;
+}
+
+.price-selection::placeholder {
+  color: #000;
+}
+
+.price-selection:not(.price-selection:placeholder-shown) {
+  outline: 2px solid #000;
 }
 
 .price-selection::-webkit-outer-spin-button,
@@ -1376,13 +1384,14 @@ body {
 
 .close-btn {
   position: absolute;
-  top: 50px;
-  right: 50px;
+  cursor: pointer;
   border: none;
   padding: 0;
   width: 52px;
   height: 52px;
   border-radius: 50%;
+  top: 11%;
+  right: 7%;
 }
 
 .close-btn::before {
@@ -1409,14 +1418,89 @@ body {
 
 .modal-form {
   display: grid;
-  grid-template-columns: repeat(4, 110px);
+  grid-template-columns: 137px 198px 131px 110px;
   row-gap: 48px;
+  align-items: center;
   grid-template-areas:
     "title title title title"
     "start-label start-input start-input start-input"
     "end-label end-input end-input end-input"
     "adult-label adult-input child-label child-input"
     "button button button button";
+}
+
+.modal-fieldset label {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.modal-fieldset input {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  background-color: #f2f2f2;
+  width: 440px;
+  border-radius: 4px;
+  padding: 12px 20px;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+}
+
+.modal-fieldset .date-start-input::placeholder,
+.modal-fieldset .date-end-input::placeholder {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.date-start-container,
+.date-end-container {
+  position: relative;
+}
+
+.date-text {
+  position: absolute;
+  font-size: 16px;
+  line-height: 21px;
+  width: 400px;
+  top: 110%;
+  left: 5%;
+  pointer-events: none;
+}
+
+.date-error {
+  color: #ff5757;
+}
+
+.date-correct {
+  color: #333333;
+}
+
+.modal-fieldset input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.modal-fieldset input::-webkit-outer-spin-button,
+.modal-fieldset input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.date-start-input::before,
+.date-end-input::before {
+  position: absolute;
+  content: "";
+  background: url(../images/icon-calendar.svg);
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%);
 }
 
 .modal-fieldset {
@@ -1429,13 +1513,15 @@ body {
 .modal-title {
   grid-area: title;
   margin-bottom: 16px;
+  font-weight: 700;
+  text-align: start;
 }
 
 .date-start-label {
   grid-area: start-label;
 }
 
-.date-start-input {
+.date-start-container {
   grid-area: start-input;
 }
 
@@ -1443,7 +1529,7 @@ body {
   grid-area: end-label;
 }
 
-.date-end-input {
+.date-end-container {
   grid-area: end-input;
 }
 
@@ -1451,12 +1537,51 @@ body {
   grid-area: adult-label;
 }
 
+.modal-counter-container {
+  display: flex;
+  width: max-content;
+}
+
+.counter-btn {
+  width: 40px;
+  height: 48px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border: none;
+  padding: 0;
+}
+
+.modal-counter-input.adult-input {
+  border-radius: 0%;
+  width: 30px;
+  padding: 12px 10px;
+  border: none;
+}
+
 .adult-input {
   grid-area: adult-input;
 }
 
+.counter-btn.minus-btn {
+  position: relative;
+  order: -1;
+  border-radius: 4px 0 0 4px;
+  background: url(../images/icon-minus.svg) no-repeat #f2f2f2;
+  background-position: 50% 50%;
+}
+
+.counter-btn.plus-btn {
+  right: 0;
+  border-radius: 0 4px 4px 0;
+  background: url(../images/icon-plus.svg) no-repeat #f2f2f2;
+  background-position: 50% 50%;
+}
+
 .child-label-container {
+  position: relative;
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .child-label {
@@ -1478,10 +1603,135 @@ body {
   fill: #fff;
 }
 
+.modal-counter-input.child-input {
+  border-radius: 0%;
+  width: 30px;
+  padding: 12px 10px;
+}
+
 .child-input {
   grid-area: child-input;
 }
 
 .modal-find-btn {
   grid-area: button;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  background-color: #83b3d3;
+  border: none;
+  border-radius: 10px;
+  padding: 17px 40px;
+}
+
+.child-tooltip {
+  position: absolute;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  width: 256px;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 15px 18px 18px 22px;
+  top: 160%;
+  right: -52%;
+  display: none;
+}
+
+.child-tooltip::before {
+  position: absolute;
+  content: "";
+  background: url(../images/toolltip-triangle.svg) transparent;
+  width: 19px;
+  height: 9px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+/* MODAL WINDOW -- STATUS*/
+
+.icon-info:hover + .child-tooltip,
+.icon-info:focus + .child-tooltip {
+  display: block;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  background-color: #e6e6e6;
+}
+
+.close-btn:focus {
+  outline: 2px solid #83b3d3;
+}
+
+.modal-fieldset input[type="date"]:hover,
+.modal-fieldset input[type="date"]:focus {
+  background-color: #e6e6e6;
+}
+
+.modal-fieldset input[type="date"]:focus {
+  outline: 2px solid #83b3d3;
+}
+
+.minus-btn:hover.minus-btn::before,
+.minus-btn:focus.minus-btn::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.minus-btn:focus.minus-btn::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+
+  outline: 2px solid #82b3d3;
+}
+
+.modal-find-btn:hover,
+.modal-find-btn:focus,
+.modal-find-btn:active {
+  background-color: #68a2ca;
+}
+
+.modal-find-btn:focus {
+  outline: none;
+}
+
+@supports selector(:focus-visible) {
+  .close-btn:focus-visible {
+    background-color: #e6e6e6;
+    outline: 2px solid #83b3d3;
+  }
+
+  .modal-fieldset input[type="date"]:focus-visible {
+    background-color: #e6e6e6;
+    outline: 2px solid #83b3d3;
+  }
+
+  .modal-find-btn:focus-visible {
+    background-color: #68a2ca;
+    outline: none;
+  }
+}
+
+/* .close-btn:active .close-btn::before,
+.close-btn:active .close-btn::after {
+  opacity: 0.3;
+} */
+
+.modal-fieldset input[type="date"]:not(input[type="date"]:placeholder-shown) {
+  outline: 2px solid #000;
+}
+
+.modal-find-btn:active {
+  color: rgba(255, 255, 255, 0.3);
 }

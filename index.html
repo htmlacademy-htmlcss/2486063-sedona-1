@@ -322,6 +322,7 @@
               Поиск гостиницы в седоне
             </button>
           </section>
+
           <section class="subscribe">
             <h2 class="visually-hidden">Форма для подписки на рассылку</h2>
             <div class="subscribe-container">
@@ -356,6 +357,7 @@
           </section>
         </div>
       </main>
+
       <footer class="page-footer">
         <div class="page-footer-container">
           <div class="social-list-container">
@@ -446,7 +448,7 @@
         </div>
       </footer>
 
-      <div class="visually-hidden modal-container">
+      <div class="modal-container">
         <div class="modal-window">
           <button class="close-btn" type="button">
             <span class="visually-hidden">Закрыть</span>
@@ -458,27 +460,55 @@
             method="post"
           >
             <fieldset class="modal-fieldset">
-              <legend class="modal-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</legend>
+              <legend class="modal-title bigger-text-title">
+                ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
+              </legend>
               <label class="date-start-label" for="date-start"
                 >Дата Заезда:</label
               >
-              <input
-                class="date-start-input"
-                type="date"
-                name="date-start"
-                id="date-start"
-                value="2020-04-27"
-              />
+              <div class="date-start-container">
+                <input
+                  class="date-start-input"
+                  type="date"
+                  name="date-start"
+                  id="date-start"
+                  placeholder="Укажите дату"
+                  value="2020-04-27"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                />
+                <span class="date-text date-error"
+                  >Мы не можем отправить вас в прошлое.</span
+                >
+              </div>
               <label class="date-end-label" for="date-end">Дата Выезда:</label>
-              <input
-                class="date-end-input"
-                type="date"
-                name="date-end"
-                id="date-end"
-                value="2023-09-01"
-              />
+              <div class="date-end-container">
+                <input
+                  class="date-end-input"
+                  type="date"
+                  name="date-end"
+                  id="date-end"
+                  placeholder="Укажите дату"
+                  value="2023-09-01"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                />
+                <span class="date-text date-correct"
+                  >На эти даты есть свободные номера. Пока есть.</span
+                >
+              </div>
               <label class="adult-label" for="adult">Взрослые:</label>
-              <input class="adult-input" type="text" name="adult" id="adult" />
+              <div class="modal-counter-container">
+                <input
+                  class="modal-counter-input adult-input"
+                  type="number"
+                  name="adult"
+                  id="adult"
+                  value="2"
+                />
+                <button class="counter-btn minus-btn" type="button"></button>
+                <button class="counter-btn plus-btn"></button>
+              </div>
               <div class="child-label-container">
                 <label class="child-label" for="child">Дети:</label>
                 <svg
@@ -498,8 +528,24 @@
                     />
                   </g>
                 </svg>
+                <div class="child-tooltip">
+                  Укажите&nbsp;количество&nbsp;детей,
+                  которые&nbsp;будут&nbsp;с&nbsp;вами,&nbsp;возраст
+                  которых&nbsp;от&nbsp;6&nbsp;до&nbsp;18&nbsp;лет.&nbsp;Дети
+                  до&nbsp;6&nbsp;лет&nbsp;размещаются бесплатно.
+                </div>
               </div>
-              <input class="child-input" type="text" name="child" id="child" />
+              <div class="modal-counter-container">
+                <input
+                  class="modal-counter-input child-input"
+                  type="number"
+                  name="child"
+                  id="child"
+                  value="2"
+                />
+                <button class="counter-btn minus-btn" type="button"></button>
+                <button class="counter-btn plus-btn"></button>
+              </div>
               <button class="modal-find-btn" type="button">НАЙТИ</button>
             </fieldset>
           </form>
