@@ -687,6 +687,7 @@ body {
   border-radius: 4px 0 0 4px;
   width: 452px;
   height: 52px;
+  padding: 10px;
 }
 
 .subscribe fieldset {
@@ -1329,15 +1330,11 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 142px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-}
-
-.social-list-container {
-  min-width: 142px;
-  max-width: 200px;
 }
 
 .social-link {
@@ -1366,11 +1363,15 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 3;
+  display: none;
+}
+
+.modal-container.is-show {
+  display: flex;
 }
 
 .modal-window {
@@ -1390,7 +1391,7 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  top: 11%;
+  top: 12%;
   right: 7%;
 }
 
@@ -1467,7 +1468,7 @@ body {
   line-height: 21px;
   width: 400px;
   top: 110%;
-  left: 5%;
+  left: 20px;
   pointer-events: none;
 }
 
@@ -1512,6 +1513,7 @@ body {
 
 .modal-title {
   grid-area: title;
+  margin-top: 3px;
   margin-bottom: 16px;
   font-weight: 700;
   text-align: start;
@@ -1571,6 +1573,7 @@ body {
 }
 
 .counter-btn.plus-btn {
+  position: relative;
   right: 0;
   border-radius: 0 4px 4px 0;
   background: url(../images/icon-plus.svg) no-repeat #f2f2f2;
@@ -1682,18 +1685,37 @@ body {
   content: "";
   width: 14px;
   height: 2px;
+  outline: none;
   background-color: #000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.minus-btn:focus.minus-btn::before {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
+.plus-btn:hover.plus-btn::before,
+.plus-btn:focus.plus-btn::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  outline: none;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  outline: 2px solid #82b3d3;
+.plus-btn:hover.plus-btn::after,
+.plus-btn:focus.plus-btn::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  outline: none;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .modal-find-btn:hover,
@@ -1734,4 +1756,45 @@ body {
 
 .modal-find-btn:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.minus-btn:active.minus-btn,
+.plus-btn:active.plus-btn {
+  background: #f2f2f2;
+}
+
+.minus-btn:active.minus-btn::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plus-btn:active.plus-btn::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plus-btn:active.plus-btn::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
 }
