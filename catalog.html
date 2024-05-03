@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
@@ -236,19 +236,29 @@
                               <input
                                 class="price-selection price--min"
                                 type="number"
-                                name="min"
+                                name="min-price"
+                                id="min-price"
                                 placeholder="0"
                               />
-                              <span class="floating-placeholder">от</span>
+                              <label
+                                class="floating-placeholder"
+                                for="min-price"
+                                >от</label
+                              >
                             </div>
                             <div class="price-selection-wrapper">
                               <input
                                 class="price-selection price--max"
                                 type="number"
-                                name="max"
+                                name="max-price"
+                                id="max-price"
                                 placeholder="9000"
                               />
-                              <span class="floating-placeholder">до</span>
+                              <label
+                                class="floating-placeholder"
+                                for="max-price"
+                                >до</label
+                              >
                             </div>
                             <div class="multi-range">
                               <div

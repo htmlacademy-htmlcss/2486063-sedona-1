@@ -1,3 +1,7 @@
 {
-  "extends": "linthtml-config-htmlacademy"
+  "extends": "linthtml-config-htmlacademy",
+
+  "rules": {
+    "tag-close": false
+  }
 }
