@@ -651,6 +651,7 @@ body {
 
 .index-search-hotels {
   display: flex;
+  padding: 0 40px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -702,17 +703,8 @@ body {
   background-size: cover;
 }
 
-.subscribe-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.subscribe-container .bigger-text-title {
+.subscribe .bigger-text-title {
   margin: 0 auto 20px;
-}
-
-.subscribe-container .bigger-text {
-  margin-bottom: 54px;
 }
 
 .another--bigger--text {
@@ -728,10 +720,13 @@ body {
 
 .subscribe-form {
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .subscribe-input-email {
   display: flex;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .subscribe-form label {
