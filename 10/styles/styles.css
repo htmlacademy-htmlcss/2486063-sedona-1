@@ -1300,8 +1300,7 @@ input[type="number"] {
 
 .hotel-cards-item {
   max-width: 340px;
-  max-height: 438px;
-  padding: 20px;
+  padding: 19px;
 
   border: 1px solid #e6e6e6;
   border-radius: 4px;
