@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.9.6",
+    "linthtml-config-htmlacademy": "^1.0.20",
+    "prettier": "^3.2.5",
+    "stylelint": "^16.5.0",
+    "stylelint-config-htmlacademy": "^4.2.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^6.0.4"
+  }
+}
