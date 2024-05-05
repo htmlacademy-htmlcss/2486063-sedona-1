@@ -1201,7 +1201,7 @@ input[type="number"] {
 
   width: 292px;
   margin-right: 70px;
-  padding: 12px 19px;
+  padding: 12px 30px 12px 19px;
 
   color: #333333;
   font-size: 18px;
@@ -1608,12 +1608,6 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.modal-fieldset .date-start-input::placeholder,
-.modal-fieldset .date-end-input::placeholder {
-  font-size: 18px;
-  line-height: 24px;
-}
-
 .date-start-container,
 .date-end-container {
   position: relative;
@@ -1891,11 +1885,6 @@ input[type="number"] {
   background-color: #e6e6e6;
 }
 
-.modal-fieldset input[type="text"]:hover,
-.modal-fieldset input[type="text"]:focus {
-  background-color: #e6e6e6;
-}
-
 .date-start-container:hover::before,
 .date-end-container:hover::before {
   background-color: #e6e6e6;
@@ -1905,8 +1894,9 @@ input[type="number"] {
   outline: 2px solid #83b3d3;
 }
 
-.modal-fieldset input[type="text"]:focus {
-  outline: 2px solid #83b3d3;
+.date-start-container:focus-within::before,
+.date-end-container:focus-within::before {
+  background-color: #e6e6e6;
 }
 
 .counter-btn:focus {
@@ -1946,9 +1936,9 @@ input[type="number"] {
     outline: 2px solid #83b3d3;
   }
 
-  .modal-fieldset input[type="text"]:focus-visible {
+  .date-start-input:focus-visible .date-start-container::before,
+  .date-end-input:focus-visible .date-end-container::before {
     background-color: #e6e6e6;
-    outline: 2px solid #83b3d3;
   }
 
   .modal-find-btn:focus-visible {
@@ -1971,14 +1961,6 @@ input[type="number"] {
 .close-btn:active.close-btn::before,
 .close-btn:active.close-btn::after {
   background-color: rgba(0, 0, 0, 0.3);
-}
-
-.modal-fieldset input[type="date"]:not(input[type="date"]:placeholder-shown) {
-  outline: 2px solid #000000;
-}
-
-.modal-fieldset input[type="text"]:not(input[type="text"]:placeholder-shown) {
-  outline: 2px solid #000000;
 }
 
 .minus-btn:active.minus-btn path,
