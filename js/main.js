@@ -3,6 +3,8 @@ window.addEventListener("load", function (event) {
   const modal = document.querySelector('.js-modal');
   const modalOpen = document.querySelectorAll('.js-modal-btn');
   const modalClose = document.querySelector('.js-close-modal');
+  const modalInfoBtn = document.querySelector('.js-modal-info-btn')
+  const modalInfo = document.querySelector('.child-tooltip')
 
   modalOpen.forEach((el) => {
     el.addEventListener('click', (e) => {
@@ -11,6 +13,13 @@ window.addEventListener("load", function (event) {
     });
   });
 
+  modalInfoBtn.addEventListener('click', () => {
+    if (modalInfo.classList.contains('is-show')) {
+    modalInfo.classList.remove('is-show');
+    } else {
+      modalInfo.classList.add('is-show');
+    }
+  });
 
   modalClose.addEventListener('click', (e) => {
     modal.classList.remove('is-show');
