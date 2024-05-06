@@ -108,9 +108,7 @@
                 <span class="amount-tabs">12</span>
               </li>
             </ul>
-            <a class="header-search-link" href="#">
-              хочу сюда!
-            </a>
+            <a class="header-search-link" href="#">хочу сюда!</a>
           </div>
         </div>
       </header>
@@ -125,16 +123,15 @@
                   <ul class="breadcrumbs-list">
                     <li class="breadcrumbs-item">
                       <a class="breadcrumbs-link" href="index.html">
-                        <img
-                          src="images/return-home.svg"
-                          width="12"
-                          height="12"
-                          alt="Иконка главной страницы"
-                        />
+                        <span class="visually-hidden"
+                          >Иконка главной страницы</span
+                        >
                       </a>
                     </li>
                     <li class="breadcrumbs-item">
-                      <a class="breadcrumbs-active" href="#">Гостиницы</a>
+                      <a class="breadcrumbs-link breadcrumbs-active" href="#"
+                        >Гостиницы</a
+                      >
                     </li>
                   </ul>
                 </header>
@@ -259,28 +256,22 @@
                                 >до</label
                               >
                             </div>
-                            <div class="multi-range">
-                              <div
-                                class="range-bar"
-                                style="left: 0; width: 226px"
-                              >
-                                <button
-                                  class="range-btn range-min"
-                                  type="button"
+                          </div>
+                          <div class="multi-range">
+                            <div
+                              class="range-bar"
+                              style="left: 0; width: 226px"
+                            >
+                              <button class="range-btn range-min" type="button">
+                                <span class="visually-hidden"
+                                  >Кнопка настройки минимальной цены</span
                                 >
-                                  <span class="visually-hidden"
-                                    >Кнопка настройки минимальной цены</span
-                                  >
-                                </button>
-                                <button
-                                  class="range-btn range-max"
-                                  type="button"
+                              </button>
+                              <button class="range-btn range-max" type="button">
+                                <span class="visually-hidden"
+                                  >Кнопка настройки максимальной цены</span
                                 >
-                                  <span class="visually-hidden"
-                                    >Кнопка настройки максимальной цены</span
-                                  >
-                                </button>
-                              </div>
+                              </button>
                             </div>
                           </div>
                         </fieldset>
@@ -309,41 +300,26 @@
                 <ul class="cards-display">
                   <li class="cards-display-item">
                     <button
-                      class="cards-display-btn active img-position-container"
+                      class="cards-display-btn display-tile active"
                       type="button"
                     >
-                      <img
-                        src="images/icon-tile.svg"
-                        width="16"
-                        height="14"
-                        alt="Отображение плиткой"
-                      />
+                      <span class="visually-hidden">Отображение плиткой</span>
                     </button>
                   </li>
                   <li class="cards-display-item">
                     <button
-                      class="cards-display-btn img-position-container"
+                      class="cards-display-btn display-column img-position-container"
                       type="button"
                     >
-                      <img
-                        src="images/icon-column.svg"
-                        width="16"
-                        height="14"
-                        alt="Отображение в колонку"
-                      />
+                      <span class="visually-hidden">Отображение в колонку</span>
                     </button>
                   </li>
                   <li class="cards-display-item">
                     <button
-                      class="cards-display-btn img-position-container"
+                      class="cards-display-btn display-list img-position-container"
                       type="button"
                     >
-                      <img
-                        src="images/icon-list.svg"
-                        width="16"
-                        height="14"
-                        alt="Отображение списком"
-                      />
+                      <span class="visually-hidden">Отображение списком</span>
                     </button>
                   </li>
                 </ul>
@@ -705,5 +681,6 @@
           </a>
         </div>
       </footer>
+    </div>
   </body>
 </html>
