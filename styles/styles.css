@@ -1211,11 +1211,6 @@ body {
   pointer-events: none;
 }
 
-.filter-check-input:disabled ~ .filter-check-label::before,
-.filter-radio-input:disabled ~ .filter-radio-label::before {
-  background: none;
-}
-
 /* CATALOG SORTING AND DISPLAY HOTELS */
 .find-hotels-container {
   display: flex;
